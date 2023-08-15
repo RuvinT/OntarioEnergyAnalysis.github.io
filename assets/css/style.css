@@ -76,7 +76,7 @@ h6 {
 }
 
 #header .logo h1 {
-  font-size: 28px;
+  font-size: 24px;
   margin: 0;
   font-weight: 600;
   letter-spacing: 1px;
@@ -634,4 +634,8 @@ section {
   background: #5faee3;
   color: #fff;
   text-decoration: none;
+}
+
+.tableauPlaceholder {
+  padding-top: 6%;
 }
