@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   signUpSubmit.addEventListener('click', (e) => {
     e.preventDefault(); // Prevent the default form submission
 
+    errorMessage = document.getElementById('error-message');
+    errorMessage.style.display = 'none';
+
     // Get the values from the input elements
     const username = signUpUsername.value;
     const password = signUpPassword.value;
@@ -35,22 +38,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Validate the form inputs
     if (username === '') {
-      alert('Please enter a username.');
+      errorMessage.innerText ='Please enter a username.'
+      errorMessage.style.display = 'block';
+   
       return;
     }
 
     if (password === '') {
-      alert('Please enter a password.');
+      errorMessage.innerText ='Please enter a password.'
+      errorMessage.style.display = 'block';
       return;
     }
 
     if (password !== repeatPassword) {
-      alert('Passwords do not match. Please try again.');
+      errorMessage.innerText ='Passwords do not match. Please try again.'
+      errorMessage.style.display = 'block';
       return;
     }
 
     if (email === '') {
-      alert('Please enter an email address.');
+      errorMessage.innerText ='Please enter an email address.'
+      errorMessage.style.display = 'block';
       return;
     }
 
