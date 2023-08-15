@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(result => {
  
-        if (result[0].num == 1) {
+        if (result[0].num > 1) {
           
           window.location.href = 'tableau.html';
         } else {
