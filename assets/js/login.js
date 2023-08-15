@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
   signInSubmit.addEventListener('click', function(e) {
     e.preventDefault();
 
-    
+    errorMessage = document.getElementById('error-message');
+    errorMessage.style.display = 'none';
     const username = signInUsername.value;
     const password = signInPassword.value;
 
@@ -36,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
           
           window.location.href = 'tableau.html';
         } else {
-          alert('Invalid username or password. Please try again.');
+          errorMessage.innerText = 'Invalid username or password. Please try again.'
+          errorMessage.style.display = 'block';
+          //alert('Invalid username or password. Please try again.');
         }
       
       })
