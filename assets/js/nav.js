@@ -12,7 +12,7 @@ navbar.innerHTML = ""
 
 for (menuItem  in menu) {
   var anchor = document.createElement("a");
-  anchor.href = window.location.hostname+"/OntarioEnergyAnalysis.github.io/"+menu[menuItem];
+  anchor.href = location.origin+"/OntarioEnergyAnalysis.github.io/"+menu[menuItem];
   anchor.textContent = menuItem ;
   navbar.appendChild(anchor);
 }
